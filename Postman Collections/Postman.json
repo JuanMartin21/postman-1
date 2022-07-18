@@ -1,0 +1,194 @@
+{
+	"info": {
+		"_postman_id": "31af49b1-11af-4970-b502-6ee7690e4e28",
+		"name": "US 5773 |TX | {api} trello| crear,modificar,mover y borrar tarjetas de un tablero",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "US 5773 | TS1 |{api} cards | crear tarjetas de un tablero",
+			"item": [
+				{
+					"name": "US5773 | precon: la lista Backlog debe estar disponible en el tablero",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "d122d0fa-37fc-4aa6-9f03-30633e82efc0",
+								"exec": [
+									"pm.test(\"Precondicion: lista Backlog deberia estar disponible\",()=>{\r",
+									"    pm.response.to.have.status(200)\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"_postman_id": "6e800027-9771-4ad1-af8d-9bd7f388097c",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{GETlist}}/:id?key={{key }}&token={{token}}",
+							"host": [
+								"{{GETlist}}"
+							],
+							"path": [
+								":id"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "{{key }}"
+								},
+								{
+									"key": "token",
+									"value": "{{token}}"
+								}
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "{{ListA}}",
+									"type": "string"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "US 5773 | precon: la lista active debe estar disponible",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "38886a3e-106d-4df0-93a7-3225ae850302",
+								"exec": [
+									"pm.test(\"Precondicion: la lista Active deberia estar disponible\",()=>{\r",
+									"    pm.response.to.have.status(200)\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"_postman_id": "12e2c0a3-52e0-42bd-8bbc-3f18f8014b47",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{GETlist}}/:id?key={{key }}&token={{token}}",
+							"host": [
+								"{{GETlist}}"
+							],
+							"path": [
+								":id"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "{{key }}"
+								},
+								{
+									"key": "token",
+									"value": "{{token}}"
+								}
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "{{ListB}}",
+									"type": "string"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "US 5773 | precon: la lista Done debe estar disponible",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "46051bb6-a184-48d7-bc58-2cd05780d34e",
+								"exec": [
+									"pm.test(\"precon: la lista Done debe estar disponible\",()=>{\r",
+									"    pm.response.to.have.status(200)\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"_postman_id": "334d8c8d-16ac-4477-b22b-5a6467c75e83",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{GETlist}}/:id?key={{key }}&token={{token}}",
+							"host": [
+								"{{GETlist}}"
+							],
+							"path": [
+								":id"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "{{key }}"
+								},
+								{
+									"key": "token",
+									"value": "{{token}}"
+								}
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "{{ListC}}",
+									"type": "string"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"_postman_id": "ff77ebce-3a02-476a-a120-d74c152ffbde"
+		},
+		{
+			"name": "US 5773 |TX | {api} trello cards | modificar tarjetas|",
+			"item": [],
+			"_postman_id": "d8a7a2b5-055a-4178-b798-da49512a53db"
+		},
+		{
+			"name": "US 5773 |TX | {api} trello cards | mover tarjetas|",
+			"item": [],
+			"_postman_id": "da298def-f2e6-40e1-9737-b03ee65b6d25"
+		},
+		{
+			"name": "US 5773 |TX | {api} trello cards | remover tarjetas|",
+			"item": [],
+			"_postman_id": "58192dfb-632f-4a5a-bc09-07f05e0e80f0"
+		}
+	],
+	"variable": [
+		{
+			"id": "49efe412-3600-4e39-9bb7-9517ccf3ba1c",
+			"key": "cardrandomName",
+			"value": "",
+			"type": "string"
+		}
+	]
+}
